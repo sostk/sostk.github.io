@@ -6,10 +6,7 @@ body {
   background: linear-gradient(to bottom, #ff7eb3, #ff758c);
   color: #fff;
   text-align: center;
-  overflow-x: hidden; /* Allow vertical scrolling, prevent horizontal overflow */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  overflow-y: auto; /* Enable scrolling */
 }
 
 /* Welcome Section */

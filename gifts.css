@@ -3,15 +3,10 @@ body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #ff7eb3, #ff758c); /* Same gradient background */
+  background: linear-gradient(to bottom, #ff7eb3, #ff758c);
   color: #fff;
   text-align: center;
-  overflow-x: hidden; /* Allow vertical scrolling, prevent horizontal overflow */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  overflow-y: auto; /* Enable scrolling */
 }
 
 /* Welcome Section */

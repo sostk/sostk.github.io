@@ -84,18 +84,26 @@ body {
   animation: glow 3s infinite alternate;
 }
 
+/* Slideshow container */
 .slideshow {
+  position: relative;
   width: 100%;
-  height: 100%;
-  display: flex;
-  animation: slideshow 10s infinite;
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden;
 }
 
+/* Image styling */
 .slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Ensures images aren't fully zoomed out */
+  opacity: 0; /* Images start hidden */
+  transition: opacity 1s ease; /* Smooth fade-in effect */
 }
+
 
 /* Floating Hearts */
 .floating-hearts {

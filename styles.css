@@ -1,0 +1,180 @@
+/* General Styles */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ff7eb3, #ff758c);
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Welcome Section */
+.welcome {
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.welcome h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #ffe1e1;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.welcome p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Heart Slideshow Section */
+.heart-slideshow {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.heart {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: none;
+  clip-path: polygon(
+    50% 10%, /* Top center soft point */
+    70% 0%,  /* Top right soft point */
+    90% 20%, /* Right curve soft point */
+    95% 50%, /* Bottom right soft point */
+    50% 90%, /* Bottom tip soft point */
+    5% 50%,  /* Bottom left soft point */
+    10% 20%, /* Left curve soft point */
+    30% 0%   /* Top left soft point */
+  );
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  animation: glow 3s infinite alternate;
+}
+
+.slideshow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  animation: slideshow 10s infinite;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating Hearts */
+.floating-hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart-shape {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  clip-path: polygon(
+    50% 10%, 
+    75% 0%, 
+    100% 25%, 
+    95% 60%, 
+    50% 100%, 
+    5% 60%, 
+    0% 25%, 
+    25% 0%
+  );
+  animation: floatHeart 6s infinite ease-in-out;
+  opacity: 0;
+}
+
+.heart-shape:nth-child(1) {
+  left: 20%;
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.heart-shape:nth-child(2) {
+  left: 40%;
+  animation-delay: 1s;
+}
+
+.heart-shape:nth-child(3) {
+  left: 60%;
+  animation-delay: 2s;
+}
+
+.heart-shape:nth-child(4) {
+  left: 80%;
+  animation-delay: 3s;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #ffe1e1;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 15px rgba(255, 0, 150, 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(255, 0, 150, 0.6);
+  }
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes slideshow {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .welcome h1 {
+    font-size: 2.5rem;
+  }
+
+  .heart-slideshow {
+    width: 250px;
+    height: 250px;
+  }
+}

@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ff7eb3, #ff758c);
+  color: #fff;
+  text-align: center;
+  overflow-y: auto; /* Enable scrolling */
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for better user experience */
+}
+
+.welcome {
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.welcome h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #ffe1e1;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.welcome p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.video-gallery {
+  margin-top: 50px;
+}
+
+.video-gallery h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px; /* Add padding to prevent content from being cut off */
+}
+
+.video-item {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s;
+}
+
+.video-item h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.video-item:hover {
+  transform: scale(1.05);
+}
+
+.video-player {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #ffe1e1;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}   

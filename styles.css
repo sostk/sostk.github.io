@@ -89,7 +89,7 @@ body {
   width: 400%;
   height: 100%;
   display: flex;
-  animation: slideshow 120s infinite linear;
+  animation: slideshow 250s infinite linear;
 }
 
 .slideshow img {

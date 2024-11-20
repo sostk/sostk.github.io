@@ -28,6 +28,32 @@ body {
   margin-top: 10px;
   line-height: 1.5;
 }
+/* General button styles */
+.view-wishes-btn {
+  background-color: #ff4d4d; /* Soft red color */
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Button hover effects */
+.view-wishes-btn:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+  transform: scale(1.1);
+}
+
+/* Button focus style */
+.view-wishes-btn:focus {
+  outline: none;
+}
 
 /* Heart Slideshow Section */
 .heart-slideshow {

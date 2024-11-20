@@ -60,7 +60,7 @@ body {
 .heart-slideshow {
   margin: 30px auto;
   width: 320px;
-  height: 320px;
+  height: 350px;
   position: relative;
   overflow: hidden;
 }
